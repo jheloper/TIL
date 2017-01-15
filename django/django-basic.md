@@ -3,6 +3,8 @@
 # 개요
 장고(Django)는 대표적인 파이썬 웹 프레임워크 중 하나.
 
+![MTV](./img/django-mtv.png)
+
 MVC(Model View Controller) 패턴과 유사한 MTV(Model Template View) 패턴으로 구현되었다.
 
 
@@ -74,9 +76,18 @@ settings.py는 프로젝트 전반에 대한 설정이 있는 파일이다. 여�
 1. 장고 프로젝트를 생성한다.
 2. 장고 애플리케이션을 생성한다.
 3. settings.py에서 관련 설정을 지정한다.
-4. URLconfig 설정
-5. 모델 개발
-6. 뷰 개발
-7. 템플릿 개발
-8. DB makemigrations & migrate
-9. 서버를 실행하여 확인.
+4. URLconf 설정, 모델, 뷰, 템플릿 개발.
+5. DB makemigrations & migrate.
+6. 서버를 실행하여 확인.
+
+## URLconf
+*우아한(Elegant) URL*을 위해 장고에서 지원하는 URL 매핑 방식. `urls.py`에 지정한다. URL과 처리 함수(뷰)를 매핑한다.
+
+장고에서 URL을 분석하는 순서
+1. settings.py에서 ROOT_URLCONF를 참조하여 프로젝트 루트 URLconf(=urls.py)의 위치 검색.
+2. URLconf 로딩하여 `urlpatterns`에 지정된 URL 리스트 검사.
+3. 순서대로 URL 리스트 내용을 검사하면서 매치되면 검사 종료.
+4. 매치된 URL의 뷰 호출. 호출 시 `HttpRequest` 객체와 매칭할 때 추출된 단어들을 뷰에 파라미터로 넘겨준다.
+5. 만약 URL 리스트에서 매치되는 URL이 존재하지 않으면 에러 처리 뷰 호출.
+
+URL 패턴은 정규표현식을 사용한다.

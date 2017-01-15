@@ -8,3 +8,4 @@
 
 # Index
 - [Django 기본 개념](./django-basic.md)
+- [Django Model](./django-model.md)
