@@ -11,6 +11,10 @@
 - [연산자](./python-operator.md)
 - [기본 문법](./python-syntax.md)
 - [함수](./python-function.md)
+- [모듈과 패키지](./python-module-package.md)
 - [객체 지향 프로그래밍 - 클래스](./python-oop.md)
 - [객체 지향 프로그래밍 - 상속](./python-inheritance.md)
 - [데코레이터](./python-decorator.md)
+
+# Tip
+- [코드에 대한 팁](./python-tip-code.md)
