@@ -91,3 +91,52 @@ settings.py는 프로젝트 전반에 대한 설정이 있는 파일이다. 여�
 5. 만약 URL 리스트에서 매치되는 URL이 존재하지 않으면 에러 처리 뷰 호출.
 
 URL 패턴은 정규표현식을 사용한다.
+
+
+# 장고 settings 설정에 대해서
+
+## DATABASES
+장고는 기본적으로 데이터베이스 엔진을 SQLite3를 사용하도록 설정되어 있음. 다른 데이터베이스 엔진으로 변경하고 싶다면 DATABASES 설정을 수정하면 된다.
+
+## TEMPLATES
+템플릿 엔진 및 템플릿 파일의 경로에 대한 설정. 장고 템플릿 엔진이 아닌 Jinja와 같은 템플릿 엔진으로 바꿀 수 있다. DIRS 속성은 프로젝트 템플릿 파일 디렉터리를 지정하는 속성인데, 아래와 같이 적어주면 프로젝트 루트 경로 바로 밑에 있는 templates 디렉터리로 설정된다.
+```python
+TEMPLATES = [
+    {
+        ......
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        ......
+    },
+]
+```
+
+## STATIC_URL 및 STATICFILES_DIRS
+STATIC_URL은 정적 파일에 접근하기 위한 URL를 설정하는 속성이고, STATICFILES_DIRS은 프로젝트 정적 파일 디렉터리를 지정하는 속성이다.
+```python
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+```
+
+## TIME_ZONE
+타임존을 지정하는 속성이다. 기본으로는 세계표준시(UTC)로 설정되어 있으며, 다음과 같이 설정하면 한국 시간으로 바뀐다.
+```python
+TIME_ZONE = 'Asia/Seoul'
+```
+
+## MEDIA_URL 및 MEDIA_ROOT
+MEDIA_URL은 미디어 파일에 접근하기 위한 URL을 설정하는 속성이고, MEDIA_ROOT는 미디어 파일들이 저장될 루트 디렉터리를 설정하는 속성이다.
+```python
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+```
+
+## INSTALLED_APPS
+애플리케이션을 등록하는 속성. 애플리케이션을 등록하는 방법은 위에 적혀있으니 참고.
+
+## LANGUAGE_CODE
+언어 설정 속성. 기본적으로 영어('en-us')로 설정되어 있으며, 한글로 설정하기 위해서는 다음과 같이 설정하면 된다.
+```python
+LANGUAGE_CODE = 'ko-kr'
+```
