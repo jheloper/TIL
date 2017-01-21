@@ -10,3 +10,4 @@
 - [Django 기본 개념](./django-basic.md)
 - [Django Model](./django-model.md)
 - [Django View](./django-view.md)
+- [Django Template](./django-template.md)
