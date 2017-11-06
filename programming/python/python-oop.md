@@ -1,4 +1,4 @@
-# 객체 지향 프로그래밍(Object Oriented Programming, OOP)
+# 파이썬 객체지향 프로그래밍
 
 객체(Object) = 클래스(Class) + 인스턴스(Instance).
 
