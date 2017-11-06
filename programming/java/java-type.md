@@ -1,3 +1,5 @@
+# 자바 타입
+
 # 데이터 타입(Data type)
 
 ![데이터타입](./img/java-type.jpg)
