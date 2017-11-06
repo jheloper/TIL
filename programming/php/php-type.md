@@ -1,8 +1,7 @@
-# 타입
-
-4가지 스칼라형 : boolean, integer, float, string
-2가지 복합형 : array, object
-3가지 특수형 : resource, null, callable
+# PHP 타입
+- 4가지 스칼라형 : boolean, integer, float, string
+- 2가지 복합형 : array, object
+- 3가지 특수형 : resource, null, callable
 
 
 # 변수

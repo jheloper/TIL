@@ -1,4 +1,4 @@
-# 함수
+# PHP 함수
 PHP의 함수는 기본적으로 전역 함수. 
 
 호출하기 전에 정의할 필요가 없다. 이것의 의미는 호출하는 부분이 코드 상에서 먼저 나오고 정의하는 부분이 이후에 나온다고 하더라도 문제 없이 호출된다는 의미이다.
@@ -57,3 +57,49 @@ function recursion($i) {
     }
 }
 ```
+
+
+# 함수 인자
+
+PHP의 함수 인자는 기본적으로 값에 의한 전달(passing by value)이다.
+
+## 참조 인자 전달하기
+
+```php
+$a = 'abc';
+
+function func(&$param) {
+    $param = 123;
+}
+
+func($a);
+echo $a; // 123
+```
+
+## 인자 기본값 지정하기
+
+인자 기본값으로는 4가지 스칼라형뿐 아니라 `array`와 `null`도 사용할 수 있다.
+
+인자 기본값을 지정할 때에는 기본값을 쓰지 않는 인자가 왼쪽, 기본값을 지정한 인자가 오른쪽에 위치해야 한다.
+
+```php
+function func($param = 'this is default value') {
+    echo $param;
+}
+
+func(null); // 'this is default value'
+func('this is parameter'); // 'this is parameter'
+```
+
+## 함수 반환값
+
+함수의 반환값은 배열이나 객체를 포함하여 모든 타입이 가능하다. return 키워드를 만나면 함수의 수행이 즉시 중단되고 현재 함수를 호출한 곳으로 제어권을 돌려준다.
+
+반환값은 여러 개가 될 수 없으나, 배열로 반환하는 방법을 사용할 수 있다.
+
+```php
+function func() {
+    return array(1, 2, 3);
+}
+```
+
