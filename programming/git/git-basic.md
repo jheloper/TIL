@@ -22,9 +22,9 @@
 
 `git add --all`
 
-git add 명령어는 Untracked 상태의 파일을 Staging Area에 추가할 때, 그리고 Tracked이면서 Modified 상태의 파일을 추가할 때도 사용한다.
+`git add` 명령어는 Untracked 상태의 파일을 Staging Area에 추가할 때, 그리고 Tracked이면서 Modified 상태의 파일을 추가할 때도 사용한다.
 
-주의할 점은 git add를 실행한 시점의 파일 상태가 Staging Area에 추가되기 때문에, 만약 git add를 한 후 또 수정사항이 생겼다면 해당 파일을 다시 git add 해주어야 최신 상태의 파일이 Staging Area에 들어간다.
+주의할 점은 `git add`를 실행한 시점의 파일 상태가 Staging Area에 추가되기 때문에, 만약 `git add`를 한 후 또 수정사항이 생겼다면 해당 파일을 다시 `git add` 해주어야 최신 상태의 파일이 Staging Area에 들어간다.
 
 
 
@@ -72,7 +72,7 @@ git add 명령어는 Untracked 상태의 파일을 Staging Area에 추가할 때
 
 `git rm <file>`
 
-일반적인 파일 삭제와 git rm이 다른 점은, 일반적인 파일 삭제는 해당 파일을 Unstaged 상태로 만들어버릴 뿐이지만, git rm으로 삭제한 파일은 Staged 상태가 된다는 것이다. 이 차이는 커밋을 할 때 알 수 있는데, git rm으로 삭제한 파일은 삭제한 내용을 커밋하고 나서는 더 이상 해당 파일을 추적하지 않지만, 일반적으로 삭제한 파일은 커밋할 내용이 존재하지 않으며 git 디렉터리에는 Tracked 상태로 남는다는 점이다.
+일반적인 파일 삭제와 `git rm`이 다른 점은, 일반적인 파일 삭제는 해당 파일을 Unstaged 상태로 만들어버릴 뿐이지만, `git rm`으로 삭제한 파일은 Staged 상태가 된다는 것이다. 이 차이는 커밋을 할 때 알 수 있는데, `git rm`으로 삭제한 파일은 삭제한 내용을 커밋하고 나서는 더 이상 해당 파일을 추적하지 않지만, 일반적으로 삭제한 파일은 커밋할 내용이 존재하지 않으며 git 디렉터리에는 Tracked 상태로 남는다는 점이다.
 
 
 
